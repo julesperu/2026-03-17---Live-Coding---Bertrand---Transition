@@ -1,0 +1,98 @@
+/* GENERAL */
+
+:root {
+    --bg: #0f0f14;
+    --card: #1a1a24;
+    --border: #2e2e42;
+    --accent: #f97316;
+    --demo-bg: #0d0d18;
+    --box-bg: #2dd4bf;
+    --label-color: #6b6b8a;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 400px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.card-title {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.08rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.demo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--demo-bg);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: var(--box-bg);
+    cursor: pointer;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--label-color);
+}
+
+/* TRANSITION CARD 1 */
+
+.transition-color {
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.transition-color:hover {
+    background-color: var(--accent);
+}
+
+.transition-width {
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.transition-width:hover {
+    width: 140px;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.transition-all:hover {
+    background-color: var(--accent);
+    width: 140px;
+    border-radius: 50%;
+}
+
+/* TRANSITION CARD 2 */
