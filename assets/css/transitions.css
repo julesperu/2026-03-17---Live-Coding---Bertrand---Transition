@@ -95,4 +95,57 @@ main {
     border-radius: 50%;
 }
 
-/* TRANSITION CARD 2 */
+/**** TRANSITIONS CARD 2 ****/
+
+.demo-timing {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.timing-box {
+	width: 30px;
+	height: 30px;
+	border-radius: 6px;
+	background: var(--box-bg);
+	transition: margin-left 1.2s;
+}
+.timing-row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.6rem;
+}
+.timing-label {
+	font-family: "Space Mono", monospace;
+	font-size: 0.7rem;
+	color: var(--label-color);
+	width: 120px;
+	flex-shrink: 0;
+}
+.timing-track {
+	flex: 1;
+	background: var(--border);
+	border-radius: 4px;
+	height: 30px;
+	position: relative;
+	overflow: hidden;
+}
+.timing-track:hover .timing-box {
+	margin-left: calc(100% - 30px);
+}
+
+.ease {
+	transition-timing-function: ease;
+}
+.linear {
+	transition-timing-function: linear;
+}
+.ease-in {
+	transition-timing-function: ease-in;
+}
+.ease-out {
+	transition-timing-function: ease-out;
+}
+.ease-in-out {
+	transition-timing-function: ease-in-out;
+}

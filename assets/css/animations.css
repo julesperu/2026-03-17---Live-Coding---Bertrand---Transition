@@ -1,0 +1,139 @@
+/* GENERAL */
+
+:root {
+    --bg: #0f0f14;
+    --card: #1a1a24;
+    --border: #2e2e42;
+    --accent: #f97316;
+    --demo-bg: #0d0d18;
+    --box-bg: #2dd4bf;
+    --label-color: #6b6b8a;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 400px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.card-title {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.08rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.demo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--demo-bg);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: var(--box-bg);
+    cursor: pointer;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--label-color);
+}
+
+/* ANIMATION CARD */
+
+.animation-fade {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fadeInOut {
+    from{
+        opacity: 0;
+        background-color: var(--box-bg);
+    }
+    to{
+        opacity: 1;
+        background-color: var(--accent);
+    }
+}
+
+.animation-slide {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slide {
+    from{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translate(-40px);
+        opacity: 0;
+    }
+}
+
+.animation-spin {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-direction: alternate; */
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.animation-bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    /* animation-direction: alternate; */
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
